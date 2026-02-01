@@ -1,0 +1,20 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class DirectoryPage {
+
+	WebDriver driver;
+
+    public DirectoryPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    By heading = By.tagName("h1");
+
+    public String getHeadingText() {
+        return driver.findElement(heading).getText();
+    }
+
+}
